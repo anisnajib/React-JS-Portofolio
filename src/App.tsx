@@ -6,13 +6,11 @@ import Experience from "./screens/Experience";
 import Portofolio from "./screens/Portofolio";
 import Contact from "./screens/Contact";
 
-import Headers from "./components/Header";
 import FloatinNavigator from "./components/FloatinNavigator";
 
 function App() {
   return (
     <>
-      <Headers />
       <FloatinNavigator />
       <Home />
       <About />
