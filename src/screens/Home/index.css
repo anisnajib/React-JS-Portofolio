@@ -20,7 +20,7 @@ header {
 }
 
 /* ================ HOME SOCIAL ==================== */
-.home__social {
+.home__social_left {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,22 +30,46 @@ header {
     bottom: 3rem;
 }
 
-.home__social::after {
-    content: '';
-    width: 1px;
-    height: 2rem;
-    background: var( --color-primary);
+.home__social_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    right: 0;
+    bottom: 3rem;
 }
 
 /* ================ ME ==================== */
 .me {
     background: linear-gradient(var( --color-primary-variant), transparent);
     width: 22rem;
-    height: 30rem;
     position: absolute;
     left: calc(50% - 11rem);
     margin-top: 4rem;
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
-    padding: 6.5rem 1.5rem 1.5rem 1.5rem;
+    padding: 2.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+/* ------------------------ RESPONSIVE STYLE ------------------------ */
+/* BIG DEVICES */
+@media screen and (max-width: 1024px) {
+    header {
+        height: 68vh;
+    }
+}
+
+/* SMALL DEVICES */
+@media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+    }
+
+    .home__social_left {
+        display: none;
+    }
+    .home__social_right {
+        display: none;
+    }
 }
